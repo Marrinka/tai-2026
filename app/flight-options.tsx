@@ -1,0 +1,36 @@
+'use client';
+import {useState} from 'react';
+import {Clock,Check,Pencil,ArrowUpRight,AlertCircle} from 'lucide-react';
+import {flights,money,Plan} from './data';
+
+function Source({href,children}:{href:string;children:React.ReactNode}){return <a className="source" href={href} target="_blank" rel="noreferrer">{children}<ArrowUpRight size={13}/></a>}
+
+export default function FlightOptions({plan,disabled,onSelect,onEditPrice}:{plan:Plan;disabled:boolean;onSelect:(id:string)=>void;onEditPrice:(id:string)=>void}){
+ const [filter,setFilter]=useState('all'),[sort,setSort]=useState('fit');
+ const shown=flights.filter(f=>filter==='all'||filter==='long'&&(f.firstLayoverMinutes??0)>=480||filter==='two'&&f.outStops===2||filter==='one'&&f.outStops===1||filter==='coast'&&!f.partial).sort((a,b)=>sort==='price'?(plan.overrides['flight:'+a.id]??a.price)-(plan.overrides['flight:'+b.id]??b.price):sort==='time'?a.outMinutes-b.outMinutes:a.rank-b.rank);
+ return <>
+  <div className="page-head"><span className="eyebrow">БОЛЬШЕ ВРЕМЕНИ НА ПЕРВУЮ ПЕРЕСАДКУ</span><h1>Начинаем с перелёта</h1><p>9 вариантов на двоих. Вылет до Нового года, возвращение в начале февраля 2027. Цены проверены 31 октября 2026 года и могут измениться.</p></div>
+  <div className="flight-picks">
+   <div><span className="eyebrow">ДЕШЕВЛЕ С ДЛИННОЙ ПЕРВОЙ СТЫКОВКОЙ</span><strong>125 064 ₽</strong><p>21 декабря · China Eastern<br/>13 ч 55 мин в Пекине, затем Куньмин.<br/>44 ч 45 мин в пути до Пхукета.</p></div>
+   <div><span className="eyebrow">ОДНА ПЕРЕСАДКА И МЕНЬШЕ ДОРОГИ</span><strong>149 746 ₽</strong><p>21 декабря · Etihad<br/>13 ч 45 мин в Абу-Даби.<br/>26 ч 10 мин в пути до Пхукета.</p></div>
+  </div>
+  <div className="notice"><Clock size={20}/><p>Приоритет — <strong>8–16 часов на первой стыковке после Москвы</strong>. Это выбранный запас времени, а не гарантия при любой задержке. У маршрута с двумя пересадками длинное ожидание во втором городе не компенсирует короткую первую стыковку.</p></div>
+  <div className="toolbar flight-toolbar"><div className="pills" aria-label="Фильтр перелётов">{[['all','Все варианты'],['long','Первая стыковка ≥ 8 ч'],['two','2 пересадки туда'],['one','1 пересадка туда'],['coast','Сразу к морю']].map(([id,name])=><button key={id} className={filter===id?'active':''} aria-pressed={filter===id} onClick={()=>setFilter(id)}>{name}</button>)}</div><label>Порядок<select aria-label="Сортировать перелёты" value={sort} onChange={e=>setSort(e.target.value)}><option value="fit">По вашему запросу</option><option value="price">По цене билета</option><option value="time">По времени в пути туда</option></select></label></div>
+  <p className="flight-results" role="status">Показано {shown.length} из {flights.length} · все суммы за двоих туда и обратно · время местное</p>
+  {sort==='price'&&<p className="muted flight-results">Билеты до Бангкока не включают дорогу к морю и не сравнимы напрямую с полной стоимостью маршрута до Пхукета.</p>}
+  <div className="flight-list">{shown.map(f=>{
+   const override=plan.overrides['flight:'+f.id];const incomplete=f.partial&&override==null;
+   return <article className={'flight-card '+(plan.flightId===f.id?'selected':'')} key={f.id} data-flight-id={f.id}>
+    <div className="flight-header"><span className="airline-logo">{f.code}</span><div><h3>{f.name}</h3><span className="muted">{f.label}</span></div><span className="badge">{override!=null?'Ваша цена':f.status}</span></div>
+    <div className="flight-body"><div><div className="flight-leg"><span>ТУДА</span><strong>{f.out}</strong></div><div className="flight-leg"><span>ОБРАТНО</span><strong>{f.back}</strong></div>
+     <div className={'first-connection '+((f.firstLayoverMinutes??0)>=480?'long':f.firstLayoverMinutes!=null&&f.firstLayoverMinutes<360?'short':'')}><Clock size={17}/><div><small>ПЕРВАЯ СТЫКОВКА ПОСЛЕ МОСКВЫ</small><strong>{f.firstLayover}</strong></div></div>
+     <p>{f.via}</p><p><strong>{f.outStops===0?'Без пересадок':f.outStops===1?'1 пересадка':'2 пересадки'} туда · {f.backStops===0?'без пересадок':f.backStops===1?'1 пересадка':'2 пересадки'} обратно</strong><br/>{f.duration}</p><p className="muted">{f.baggage}</p>
+     <details className="connection-details"><summary>Все стыковки, условия и источник цены</summary><ul>{f.connections.map(c=><li key={c}>{c}</li>)}</ul><p>{f.ticket}</p><p>Источник: {f.seller}. Проверено: {f.checked}. Ссылка открывает поиск на те же даты для двух взрослых; выберите указанное расписание. Цена не зафиксирована бронированием.</p></details>
+    </div><div className="flight-price"><strong>{money(override??f.price)}</strong><small>{incomplete?'на двоих · Москва ↔ Бангкок':f.partial?'ваша полная цена всех перелётов':'на двоих · оба направления'}</small>{incomplete&&<span className="partial-price">До моря — отдельные билеты</span>}<button disabled={disabled} className={plan.flightId===f.id?'chosen':'primary'} onClick={()=>onSelect(f.id)}>{plan.flightId===f.id?<><Check size={16}/> В бюджете</>:'Выбрать этот вариант'}</button><Source href={f.url}>Смотреть билеты</Source></div></div>
+    <footer><span>{f.note}</span><button className="text-button" onClick={()=>onEditPrice(f.id)}><Pencil size={13}/>{f.partial?'Указать полную стоимость':'Уточнить цену'}</button></footer>
+   </article>
+  })}</div>
+  <div className="notice amber"><AlertCircle size={19}/><p>Выбор билета пересчитывает расходы. <strong>Даты жилья и события календаря остаются вашими</strong> — обновите их под новое расписание. Отели и питание на пересадках, дополнительные ночи в Таиланде и чемодан по невключённому тарифу добавляются отдельными расходами. Если выбран Бангкок без полной цены всех билетов, бюджет помечается как неполный.</p></div>
+  <div className="overview-bottom flight-guidance"><section className="note-card"><h3>Единый билет и задержки</h3><p>Перед оплатой проверьте, что все сегменты одного направления оформлены единым билетом. Один заказ у агрегатора сам по себе этого не подтверждает. Для отдельных билетов следующий перевозчик не обязан бесплатно менять рейс из-за опоздания предыдущего.</p><p>Базовый China Eastern имеет только 3 ч 05 мин в Шанхае. У проверенного дешёвого варианта 20 декабря через Пекин и Куньмин первая стыковка — 1 ч 20 мин: в приоритетную подборку он не включён.</p><Source href="https://connect.airindiaexpress.com/en/support/self-transfer">Перевозчик: правила самостоятельных пересадок</Source></section><section className="note-card"><h3>Длинная пересадка как часть отпуска</h3><p>По опубликованным правилам владельцы обычных паспортов РФ могут въезжать в Китай без визы на срок до 30 дней; режим продлён до 31 декабря 2027 года. Для выхода из аэропорта нужен обычный въездной контроль.</p><Source href="https://ru.china-embassy.gov.cn/rus/lsfw_143010/zytz_142816/202605/t20260520_11914284.htm">Посольство КНР: условия въезда</Source><p>China Eastern сообщает о бесплатной ночи для подходящих транзитных билетов. Доступность для конкретного тарифа и даты нужно подтвердить у авиакомпании; бесплатный отель здесь не обещан.</p><Source href="https://global.ceair.com/global/static/Announcement/AnnouncementMessage/chinaeasternnewstest/202602/t20260211_29606.html">China Eastern: транзитные услуги</Source></section></div>
+ </>
+}
