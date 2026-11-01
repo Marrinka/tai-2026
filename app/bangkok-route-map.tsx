@@ -1,11 +1,11 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
-import {routeStops,routeLegs} from './bangkok-route-data';
+import {routeStops,routeLegs,routeJunctions,Point} from './bangkok-route-data';
 import photos from './bangkok-photos.json';
 
-const colors={walk:'#387457',taxi:'#b46d3b',boat:'#287aa0'};
-const modeName={walk:'пешком',taxi:'такси',boat:'лодка'};
-const pinAnchor=(id:string)=>id==='boat'?[38,16]:id==='benjakitti'?[16,8]:[16,16];
+const colors={walk:'#387457',metro:'#7e62a8',boat:'#287aa0'};
+const modeName={walk:'пешком',metro:'метро',boat:'лодка'};
+const pinAnchor=(id:string)=>id==='boat'?[window.innerWidth<=760?30:38,16]:[16,16];
 function leaflet():Promise<any>{
  if((window as any).L)return Promise.resolve((window as any).L);
  if(!document.getElementById('leaflet-css')){const style=document.createElement('link');style.id='leaflet-css';style.rel='stylesheet';style.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';style.integrity='sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';style.crossOrigin='';document.head.appendChild(style);}
@@ -23,7 +23,7 @@ export default function BangkokRouteMap({selected,onSelect}:{selected:string;onS
  const element=useRef<HTMLDivElement>(null),map=useRef<any>(null),markers=useRef<Record<string,any>>({}),selection=useRef(onSelect);
  const [status,setStatus]=useState<'loading'|'ready'|'error'>('loading'),[tileError,setTileError]=useState(false);
  selection.current=onSelect;
- function fit(){if(map.current){map.current.closePopup();map.current.fitBounds(routeStops.map(s=>s.point),{padding:[48,55],maxZoom:13});}}
+ function fit(){if(map.current){map.current.closePopup();map.current.fitBounds(routeStops.map(s=>s.point),{padding:[(element.current?.clientWidth||900)<600?18:48,55],maxZoom:13});}}
  useEffect(()=>{
   let cancelled=false,resize:ResizeObserver|undefined;
   leaflet().then(L=>{
@@ -31,10 +31,17 @@ export default function BangkokRouteMap({selected,onSelect}:{selected:string;onS
    const m=L.map(element.current,{scrollWheelZoom:false,zoomControl:true});map.current=m;
    const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(m);
    tiles.on('tileerror',()=>{if(!cancelled)setTileError(true);});
+   const labels:{layer:any;point:Point}[]=[];
    routeLegs.forEach(leg=>{
-    L.polyline(leg.path,{color:colors[leg.mode],weight:4,opacity:.9,dashArray:'7 9',lineCap:'round'}).addTo(m).bindPopup(`<strong>${modeName[leg.mode]} · ${leg.time}</strong><p>${leg.note}</p>`);
-    L.tooltip({permanent:true,direction:'center',className:`bkk-leg-label ${leg.mode}`,opacity:1,interactive:false}).setLatLng(leg.label).setContent(`${leg.time} <span>· ${modeName[leg.mode]}</span>`).addTo(m);
+    (leg.segments||[leg]).forEach(segment=>{
+     L.polyline(segment.path,{color:colors[segment.mode],weight:4,opacity:.9,dashArray:'7 9',lineCap:'round'}).addTo(m).bindPopup(`<strong>${leg.modeLabel||modeName[leg.mode]} · ${leg.time}</strong><p>${leg.note}</p>`);
+     const label=L.tooltip({permanent:true,direction:'center',className:`bkk-leg-label ${segment.mode}`,opacity:1,interactive:false}).setLatLng(segment.label).setContent(`${segment.time} <span>· ${modeName[segment.mode]}</span>`).addTo(m);
+     labels.push({layer:label,point:segment.label});
+    });
    });
+   function fitLabels(){const width=m.getSize().x;labels.forEach(({layer,point})=>{const x=m.latLngToContainerPoint(point).x,half=(layer.getElement()?.offsetWidth||60)/2;const visible=x>-half&&x<width+half;const clamped=visible?Math.max(half+6,Math.min(width-half-6,x)):x;layer.options.offset=L.point(clamped-x,0);layer.update();});}
+   m.on('moveend zoomend resize',fitLabels);
+   routeJunctions.forEach(j=>L.circleMarker(j.point,{radius:5,color:'#567369',fillColor:'#fff',fillOpacity:1,weight:2}).addTo(m).bindTooltip(j.name));
    routeStops.forEach((stop,i)=>{
     const icon=L.divIcon({className:'bkk-route-pin',html:`<span>${i+1}</span>`,iconSize:[32,32],iconAnchor:pinAnchor(stop.id)});
     const pin=L.marker(stop.point,{icon,title:`${i+1}. ${stop.name}`,alt:`${i+1}. ${stop.name}`,keyboard:true,riseOnHover:true}).addTo(m);
