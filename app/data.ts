@@ -5,7 +5,7 @@ import bangkokResearch from './bangkok-stays.json';
 export const places = research.places;
 export const activities = research.activities;
 export const checked = '31 октября 2026';
-export type Flight={id:string;code:string;name:string;label:string;price:number;status:string;out:string;back:string;duration:string;via:string;baggage:string;note:string;url:string;firstLayoverMinutes:number|null;firstLayover:string;outStops:number;backStops:number;outMinutes:number;seller:string;ticket:string;connections:string[];checked:string;rank:number;partial?:boolean};
+export type Flight={id:string;code:string;name:string;label:string;price:number;status:string;out:string;back:string;duration:string;via:string;baggage:string;note:string;url:string;firstLayoverMinutes:number|null;firstLayover:string;outStops:number;backStops:number;outMinutes:number;seller:string;ticket:string;connections:string[];checked:string;rank:number;partial?:boolean;returnUrl?:string;outPrice?:number;backPrice?:number;regularPrice?:number;startsInBangkok?:boolean;trip?:{period:string;periodLong:string;nights:string;route:string;stayNotice:string};calendarEvents?:TripEvent[]};
 export const flights:Flight[]=flightResearch;
 export type Stay={id:string;name:string;region:string;area:string;type:string;segment:'holiday'|'work'|'bangkok';price:number|null;priceLabel:string;status:string;features:string[];unverified:string[];description:string;note:string;url:string;photos:string[];photoSource:string;priceTHB?:number|null};
 const hotels:Stay[]=[
