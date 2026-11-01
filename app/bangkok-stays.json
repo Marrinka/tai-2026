@@ -1,0 +1,157 @@
+[
+  {
+    "id": "bkk-parvena",
+    "name": "Parvena Hotel · номер 4",
+    "region": "Бангкок",
+    "area": "Суан Пхлу · Soi 5",
+    "type": "Номер в отеле",
+    "segment": "bangkok",
+    "price": 4983,
+    "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
+    "status": "Цена на даты",
+    "platform": "Airbnb",
+    "badge": "В желаемом бюджете",
+    "rating": "5,0 / 5 · 1 отзыв",
+    "bed": "Две кровати по объявлению",
+    "bath": "Собственный санузел",
+    "description": "Первый кандидат, если подходят две кровати. Отдельный гостиничный номер в том же районе, где наш завтрак BARTELS.",
+    "features": [
+      "Кондиционер",
+      "Wi-Fi",
+      "Холодильник",
+      "Уборка"
+    ],
+    "arrival": "Заезд 13:00–23:00, через персонал. Если задержитесь позже 23:00, заранее подтвердить заселение. Выезд до 12:00.",
+    "route": "Суан Пхлу, переулок 5. Удобная база для пешего выхода к BARTELS Sathorn; до завтрака ориентировочно 5–12 минут. Это оценка, проверьте путь по карте.",
+    "note": "На Airbnb показан итог 4 982,24 ₽ после скидки; в бюджет округлено вверх до 4 983 ₽. Бесплатная отмена 24 часа после бронирования, затем тариф невозвратный. Сверить срок в оформлении.",
+    "unverified": [
+      "В отзыве упоминается шум с улицы — попросить тихий номер",
+      "Датчик дыма не подтверждён в объявлении",
+      "На Airbnb пока только один отзыв"
+    ],
+    "url": "https://www.airbnb.co.uk/rooms/679213670412751747?check_in=2026-12-22&check_out=2026-12-24&adults=2&currency=RUB",
+    "photoSource": "https://www.airbnb.co.uk/rooms/679213670412751747",
+    "official": "https://www.parvenahotelsathorn.com/rooms/",
+    "mapQuery": "Parvena Hotel Sathorn Bangkok",
+    "photos": [
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-679213670412751747/original/09c08faa-e332-43ee-8371-437dadf264ce.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-679213670412751747/original/b8d8ff8e-5a0b-4607-8e40-5f10856f2c44.jpeg?im_w=720"
+    ]
+  },
+  {
+    "id": "bkk-loft-spacious",
+    "name": "Loft Suanplu 8 · Spacious",
+    "region": "Бангкок",
+    "area": "Суан Пхлу · Soi 8",
+    "type": "Отдельная комната",
+    "segment": "bangkok",
+    "price": 5322,
+    "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
+    "status": "Цена на даты",
+    "platform": "Airbnb",
+    "badge": "С двуспальной кроватью",
+    "rating": "4,84 / 5 · 37 отзывов",
+    "bed": "Одна двуспальная кровать",
+    "bath": "Санузел только для вас; расположение уточнить",
+    "description": "Простой номер в небольшом гостевом отеле. Хороший вариант по расположению; терраса на крыше и кафе в соседних переулках.",
+    "features": [
+      "Кондиционер",
+      "Wi-Fi",
+      "Кодовый замок",
+      "Терраса объекта"
+    ],
+    "arrival": "Самостоятельный заезд с кодом, с 14:00. Стойка работает 09:00–22:00; получить инструкции до прилёта. Выезд до 11:00.",
+    "route": "Soi Suan Phlu 8, рядом с BARTELS. До завтрака ориентировочно 5–10 минут пешком; оценка по расположению, а не замер маршрута.",
+    "note": "Показанная цена Airbnb за две ночи на двоих. Бесплатная отмена 24 часа после бронирования, затем невозвратно. Это тот же объект, что Large, но другое объявление и номер.",
+    "unverified": [
+      "Нужно подниматься по лестнице",
+      "Датчик дыма не подтверждён в объявлении",
+      "Попросить тихий номер и уточнить этаж"
+    ],
+    "url": "https://www.airbnb.com/rooms/20932648?check_in=2026-12-22&check_out=2026-12-24&adults=2&currency=RUB",
+    "photoSource": "https://www.airbnb.com/rooms/20932648",
+    "mapQuery": "Loft Suanplu 8 Bangkok",
+    "photos": [
+      "https://a0.muscache.com/im/pictures/26ceff7a-34b6-4bb9-93c0-545022660a4d.jpg?im_w=960",
+      "https://a0.muscache.com/im/pictures/4d431483-43b6-44e3-8c2e-d5d06d7bb006.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": "bkk-loft-large",
+    "name": "Loft Suanplu 8 · Large",
+    "region": "Бангкок",
+    "area": "Суан Пхлу · Soi 8",
+    "type": "Отдельная комната",
+    "segment": "bangkok",
+    "price": 5343,
+    "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
+    "status": "Цена на даты",
+    "platform": "Airbnb",
+    "badge": "Альтернатива в том же отеле",
+    "rating": "4,88 / 5 · 32 отзыва",
+    "bed": "Одна двуспальная кровать",
+    "bath": "Санузел только для вас; расположение уточнить",
+    "description": "Ещё один номер Loft Suanplu 8. Гости отмечают чистоту и близость кафе; в отзыве отдельно упомянут BARTELS в пешей доступности.",
+    "features": [
+      "Кондиционер",
+      "Wi-Fi",
+      "Кодовый замок",
+      "Хранение вещей"
+    ],
+    "arrival": "Заезд с 14:00, самостоятельно по коду. Стойка 09:00–22:00; согласовать поздний вход заранее. Выезд до 11:00.",
+    "route": "Тот же адрес, что Spacious: ориентировочно 5–10 минут пешком до BARTELS. Выбирать между ними стоит по комнате и условиям, расположение одинаковое.",
+    "note": "Показанная цена Airbnb за две ночи на двоих. Бесплатная отмена 24 часа после бронирования, затем невозвратно. Холодильник и бытовая зона общие, не в номере.",
+    "unverified": [
+      "В отзывах: жёсткий матрас, крутая узкая лестница",
+      "Небольшой санузел",
+      "Датчик дыма не подтверждён в объявлении"
+    ],
+    "url": "https://www.airbnb.com/rooms/20932436?check_in=2026-12-22&check_out=2026-12-24&adults=2&currency=RUB",
+    "photoSource": "https://www.airbnb.com/rooms/20932436",
+    "mapQuery": "Loft Suanplu 8 Bangkok",
+    "photos": [
+      "https://a0.muscache.com/im/pictures/b29ec103-3c6b-419e-8198-1beff3ada974.jpg?im_w=960",
+      "https://a0.muscache.com/im/pictures/d97aa27c-d399-4191-bd04-d6d8c5738713.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": "bkk-iresidence",
+    "name": "I Residence Hotel Sathorn",
+    "region": "Бангкок",
+    "area": "Суан Пхлу · Soi 6",
+    "type": "Номер в отеле",
+    "segment": "bangkok",
+    "price": null,
+    "quote": 5825,
+    "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
+    "status": "Тариф требует подтверждения",
+    "platform": "Booking.com",
+    "badge": "Цена с условием входа",
+    "rating": "7,5 / 10 · 807 отзывов",
+    "bed": "King или две кровати — по наличию",
+    "bath": "Собственный санузел внутри номера",
+    "description": "Superior, 25 м². Альтернатива с круглосуточной стойкой: удобнее при позднем прилёте, но оценка гостей ниже, чем у Loft.",
+    "features": [
+      "Кондиционер",
+      "Wi-Fi",
+      "Мини-бар",
+      "Стойка 24/7"
+    ],
+    "arrival": "Стойка регистрации круглосуточная. Сообщить ожидаемое время прибытия и предупредить о задержке рейса.",
+    "route": "Soi Suan Phlu 6, в том же квартале, что BARTELS. Ориентир до завтрака — 5–12 минут пешком, точный путь по карте.",
+    "note": "Booking показывает 5 825 ₽ с налогами и сборами, но помечает тариф как доступный после входа. Невозвратный, онлайн-оплата, без завтрака. Для бюджета сначала подтвердите свою цену. Вариант с отменой показан за 6 052 ₽ — выше лимита.",
+    "unverified": [
+      "Цена зависит от доступности тарифа в вашем аккаунте",
+      "Двуспальная кровать не гарантирована",
+      "Официальный сайт заявляет датчики дыма и пожарную сигнализацию"
+    ],
+    "url": "https://www.booking.com/hotel/th/premier-residence.html?checkin=2026-12-22&checkout=2026-12-24&group_adults=2&no_rooms=1&group_children=0&selected_currency=RUB",
+    "photoSource": "https://www.booking.com/hotel/th/premier-residence.html",
+    "official": "https://www.iresidencehotel.com/",
+    "mapQuery": "I Residence Hotel Sathorn Bangkok",
+    "photos": [
+      "https://cf.bstatic.com/xdata/images/hotel/max500/582180141.jpg?k=55cdb202b9cfd23b85ba7a0cd29e15cea28fbe2280abb51ba8d8caa7e1738c3d&o=",
+      "https://cf.bstatic.com/xdata/images/hotel/max500/582187000.jpg?k=de0582c2785deb563bb5c4f6d99780aba8c3b9338848ed8f1d86a24569f37a38&o="
+    ]
+  }
+]
