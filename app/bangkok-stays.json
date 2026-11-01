@@ -1,5 +1,58 @@
 [
   {
+    "id": "bkk-mybed",
+    "name": "Mybed Sathorn · Standard Double",
+    "region": "Бангкок",
+    "area": "Суан Пхлу · Soi 7",
+    "type": "Номер в отеле",
+    "segment": "bangkok",
+    "price": 4525,
+    "priceTHB": 1900,
+    "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
+    "status": "Цена на даты",
+    "platform": "Сайт отеля",
+    "badge": "Новый вариант · рядом со стартом",
+    "rating": "Booking: 8,2/10 · 160 отзывов",
+    "bed": "Одна двуспальная кровать · 20 м²",
+    "bath": "Собственный санузел",
+    "description": "Стандартный номер с окном. На официальных фото — простой аккуратный интерьер, светлое постельное бельё и спокойные цвета. В описании отеля указано обновление этой категории.",
+    "assessment": "Подходит по расположению и бюджету: можно начать день пешком, стойка работает круглосуточно. Найденный тариф невозвратный.",
+    "summary": "С окном, рядом с BARTELS, стойка 24/7; невозвратный",
+    "features": [
+      "Кондиционер",
+      "Wi-Fi",
+      "Окно",
+      "Стол",
+      "Сейф"
+    ],
+    "arrival": "Заезд с 14:00, выезд до 12:00. Стойка работает 24 часа; сообщите время вечернего прибытия.",
+    "route": "Soi Suan Phlu 7, адрес 642/6–9. До BARTELS Sathorn ориентировочно 5–10 минут пешком — оценка по расположению, точный путь смотрите на карте.",
+    "mapQuery": "Mybed Sathorn Bangkok",
+    "note": "Проверено 1 ноября: Standard Double with window, Room Only, 22–24 декабря, 1 номер и 2 взрослых. Итог 1 900 THB с налогами и сборами. Система отеля показывает 4 524,26 ₽; в план округлено вверх до 4 525 ₽. Рублёвый пересчёт сайта может отличаться от курса оплаты. Тариф невозвратный, изменения не разрешены; завтрак не включён.",
+    "unverified": [
+      "Фотографии официальные: состояние конкретного номера ими не гарантируется",
+      "Попросить тихий номер и подтвердить категорию с окном",
+      "Перед оплатой сверить доступность, итог и способ оплаты"
+    ],
+    "photos": [
+      "https://www.mybedsathorn.com/images/43.jpg",
+      "https://www.mybedsathorn.com/images/42.jpg"
+    ],
+    "url": "https://ibe.hoteliers.guru/ibe/en/Mybed-Sathorn-Sathorn-Bangkok-TH",
+    "photoSource": "https://www.mybedsathorn.com/rooms/standard-double-room",
+    "official": "https://www.mybedsathorn.com/",
+    "sources": [
+      {
+        "label": "Фото и удобства Standard Double",
+        "url": "https://www.mybedsathorn.com/rooms/standard-double-room"
+      },
+      {
+        "label": "Отзывы на Booking",
+        "url": "https://www.booking.com/hotel/th/mybed-sathorn.html"
+      }
+    ]
+  },
+  {
     "id": "bkk-parvena",
     "name": "Parvena Hotel · номер 4",
     "region": "Бангкок",
@@ -49,7 +102,7 @@
     "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
     "status": "Цена на даты",
     "platform": "Airbnb",
-    "badge": "С двуспальной кроватью",
+    "badge": "Не подошёл по фотографиям",
     "rating": "4,84 / 5 · 37 отзывов",
     "bed": "Одна двуспальная кровать",
     "bath": "Санузел только для вас; расположение уточнить",
@@ -74,7 +127,8 @@
     "photos": [
       "https://a0.muscache.com/im/pictures/26ceff7a-34b6-4bb9-93c0-545022660a4d.jpg?im_w=960",
       "https://a0.muscache.com/im/pictures/4d431483-43b6-44e3-8c2e-d5d06d7bb006.jpg?im_w=720"
-    ]
+    ],
+    "assessment": "Оставлен для сравнения. Расположение удобное, но фотографии не понравились — в короткий список не включаем."
   },
   {
     "id": "bkk-loft-large",
@@ -87,7 +141,7 @@
     "priceLabel": "22–24 декабря 2026 · 2 ночи · двое",
     "status": "Цена на даты",
     "platform": "Airbnb",
-    "badge": "Альтернатива в том же отеле",
+    "badge": "Не подошёл по фотографиям",
     "rating": "4,88 / 5 · 32 отзыва",
     "bed": "Одна двуспальная кровать",
     "bath": "Санузел только для вас; расположение уточнить",
@@ -112,7 +166,8 @@
     "photos": [
       "https://a0.muscache.com/im/pictures/b29ec103-3c6b-419e-8198-1beff3ada974.jpg?im_w=960",
       "https://a0.muscache.com/im/pictures/d97aa27c-d399-4191-bd04-d6d8c5738713.jpg?im_w=720"
-    ]
+    ],
+    "assessment": "Оставлен для сравнения. Расположение удобное, но фотографии не понравились — в короткий список не включаем."
   },
   {
     "id": "bkk-iresidence",
@@ -155,7 +210,6 @@
     ]
   },
   {
-    "number": 1,
     "id": "bkk-colorful",
     "name": "Красочная студия · Rich",
     "area": "Yan Nawa · юго-восточнее Люмпини",
@@ -196,7 +250,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 2,
     "id": "bkk-cj109",
     "name": "CJ Eland · Thonglor 109",
     "area": "Sukhumvit 36 · Thong Lo",
@@ -238,7 +291,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 3,
     "id": "bkk-cj110",
     "name": "CJ Eland · Thonglor 110",
     "area": "Sukhumvit 36 · Thong Lo",
@@ -280,7 +332,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 4,
     "id": "bkk-aim",
     "name": "The Aim Sathorn Hotel",
     "area": "Сатхон · Soi Sri Bamphen",
@@ -328,7 +379,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 5,
     "id": "bkk-hap-pam",
     "name": "HAP@Sathorn · объявление Pam",
     "area": "Сатхон · рядом с MRT Lumphini",
@@ -369,7 +419,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 6,
     "id": "bkk-riverside-tony",
     "name": "Riverside · кондо Tony",
     "area": "Около BTS Saphan Taksin",
@@ -412,7 +461,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 7,
     "id": "bkk-naraa-grey",
     "name": "Living Naraa · Grey",
     "area": "Сатхон · Naradhiwas 8/1",
@@ -462,7 +510,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 8,
     "id": "bkk-naraa-ble",
     "name": "Living Naraa · #ble",
     "area": "Сатхон · Naradhiwas 8/1",
@@ -512,7 +559,6 @@
     "platform": "Airbnb"
   },
   {
-    "number": 9,
     "id": "bkk-tropical-summer",
     "name": "Tropical Summer · Deluxe",
     "area": "Сатхон · Naradhiwas Soi 6",
