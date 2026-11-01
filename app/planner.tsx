@@ -4,7 +4,7 @@ import FlightOptions from './flight-options';
 import BangkokDay from './bangkok-day';
 import {Sun,Plane,House,MapPin,Mountain,CalendarDays,Wallet,ClipboardCheck,ArrowUpRight,ArrowRight,Plus,Check,ChevronLeft,ChevronRight,X,Trash2,Pencil,Download,RefreshCw,Menu,Cloud,Link as LinkIcon,AlertCircle,Clock,Users,Waves,Search,ExternalLink} from 'lucide-react';
 import {places,activities,flights,stays,initialPlan,checklist,totals,money,checked,Plan,TripEvent,Stay} from './data';
-const nav=[{id:'overview',title:'Наша зимовка',icon:Sun},{id:'flights',title:'Перелёты',icon:Plane},{id:'bangkok',title:'Два дня в Бангкоке',icon:MapPin},{id:'stays',title:'Где жить',icon:House},{id:'map',title:'Карта мест',icon:MapPin},{id:'activities',title:'Чем заняться',icon:Mountain},{id:'calendar',title:'Календарь',icon:CalendarDays},{id:'budget',title:'Расходы',icon:Wallet},{id:'prepare',title:'Подготовка',icon:ClipboardCheck}];
+const nav=[{id:'overview',title:'Наша зимовка',icon:Sun},{id:'flights',title:'Перелёты',icon:Plane},{id:'bangkok',title:'День в Бангкоке',icon:MapPin},{id:'stays',title:'Где жить',icon:House},{id:'map',title:'Карта мест',icon:MapPin},{id:'activities',title:'Чем заняться',icon:Mountain},{id:'calendar',title:'Календарь',icon:CalendarDays},{id:'budget',title:'Расходы',icon:Wallet},{id:'prepare',title:'Подготовка',icon:ClipboardCheck}];
 const dateLabel=(d:string)=>new Date(d+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'long'});
 const shortDate=(d:string)=>new Date(d+'T12:00:00').toLocaleDateString('ru-RU',{day:'numeric',month:'short'});
 const uid=()=>crypto.randomUUID();

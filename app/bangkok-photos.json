@@ -1,0 +1,83 @@
+{
+  "benjakitti": {
+    "alt": "Парк Бенджакитти: водно-болотные сады и пешеходные мостки",
+    "source": "https://commons.wikimedia.org/wiki/File:Benjakitti_Forest_Park_(I).jpg",
+    "artist": "Supanut Arunoprayote",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "usageNote": "",
+    "url": "/images/bangkok/benjakitti.jpg"
+  },
+  "lumphini": {
+    "alt": "Озеро в парке Люмпини на фоне городских зданий",
+    "source": "https://commons.wikimedia.org/wiki/File:Lumphini_Park_(I).jpg",
+    "artist": "Supanut Arunoprayote",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "usageNote": "",
+    "url": "/images/bangkok/lumphini.jpg"
+  },
+  "palace": {
+    "alt": "Храм Изумрудного Будды Ват Пхра Кео в комплексе Большого дворца",
+    "source": "https://commons.wikimedia.org/wiki/File:Wat_Phra_Kaew_by_Ninara_TSP_edit_crop.jpg",
+    "artist": "Original image: Ninara from Helsinki, Finland.  Edit: TSP",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "usageNote": "",
+    "url": "/images/bangkok/palace.jpg"
+  },
+  "boat": {
+    "alt": "Общественный речной катер Chao Phraya Express Boat на Чаопрайе",
+    "source": "https://commons.wikimedia.org/wiki/File:Chao_Phraya_Express_Boat_Service,_Bangkok,_Thailand_(7053021537).jpg",
+    "artist": "David McKelvey from Brisbane, Australia",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "usageNote": "Illustration of river transport; the boat shown is Chao Phraya Express Boat, not the blue tourist catamaran. Do not promise this exact vessel.",
+    "url": "/images/bangkok/boat.jpg"
+  },
+  "talat-noi": {
+    "alt": "Улица и исторические фотографии в квартале Талат Ной",
+    "source": "https://commons.wikimedia.org/wiki/File:Talat_Noi3.jpg",
+    "artist": "Phoebus 28",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "usageNote": "",
+    "url": "/images/bangkok/talat-noi.jpg"
+  },
+  "chinatown": {
+    "alt": "Улица Яоварат в Чайнатауне вечером",
+    "source": "https://commons.wikimedia.org/wiki/File:Chinatown_in_Bangkok_(Yaowarat)_at_night.jpg",
+    "artist": "Deepak-nsk",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "usageNote": "",
+    "url": "/images/bangkok/chinatown.jpg"
+  },
+  "asiatique": {
+    "alt": "Торговая галерея Asiatique The Riverfront вечером",
+    "source": "https://commons.wikimedia.org/wiki/File:Asiatique_The_Riverfront_-_Night_view01.jpg",
+    "artist": "Wakorinda",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "usageNote": "",
+    "url": "/images/bangkok/asiatique.jpg"
+  },
+  "bartels": {
+    "alt": "Интерьер BARTELS Asok в Бангкоке",
+    "source": "https://www.bartelsinternational.com/",
+    "artist": "BARTELS",
+    "license": "Официальное фото BARTELS",
+    "licenseUrl": "",
+    "usageNote": "Exact official BARTELS Asok image; no open license stated. Credit BARTELS and link the official venue source; do not label as Creative Commons.",
+    "url": "/images/bangkok/bartels.jpg"
+  },
+  "iconsiam": {
+    "alt": "Крытый рынок SOOKSIAM в ICONSIAM",
+    "source": "https://commons.wikimedia.org/wiki/File:Sooksiam_Indoor_Floating_Market.jpg",
+    "artist": "Jpatokal",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "usageNote": "",
+    "url": "/images/bangkok/iconsiam.jpg"
+  }
+}
