@@ -60,7 +60,7 @@ npm run dev
 | --- | --- |
 | Выбранные билеты, жильё, события, расходы и отметки | [app/trip-plan.json](app/trip-plan.json) |
 | Каталог рейсов, цены и ссылки | [app/flights.json](app/flights.json) |
-| Жильё в Бангкоке, кондо и остальные отели | [app/bangkok-stays.json](app/bangkok-stays.json), [app/condos.json](app/condos.json), [app/data.ts](app/data.ts) |
+| Жильё в Бангкоке и Краби, кондо и остальные отели | [app/bangkok-stays.json](app/bangkok-stays.json), [app/krabi-stays.json](app/krabi-stays.json), [app/condos.json](app/condos.json), [app/data.ts](app/data.ts) |
 | Места, экскурсии и активности | [app/research.json](app/research.json) |
 | День в Бангкоке и фотографии остановок | [app/bangkok-route-data.ts](app/bangkok-route-data.ts), [app/bangkok-photos.json](app/bangkok-photos.json) |
 | Маршруты по югу и Краби по дням | [app/south-data.ts](app/south-data.ts), [app/krabi-itinerary.tsx](app/krabi-itinerary.tsx) |
