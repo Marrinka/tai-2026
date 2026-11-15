@@ -1,5 +1,35 @@
 [
   {
+    "id": "krabi-trip-710453",
+    "name": "Naga Peak Resort",
+    "region": "Краби",
+    "area": "Нонг-Тхале · в стороне от пляжа Ао Нанг",
+    "type": "Номер",
+    "segment": "holiday",
+    "price": 22698,
+    "priceLabel": "25 дек — 1 янв · 7 ночей на двоих, включая налоги и сборы",
+    "status": "Цена на даты",
+    "features": [
+      "Одна кровать queen-size",
+      "Свой санузел с душем",
+      "Кондиционер",
+      "Холодильник",
+      "21 м²"
+    ],
+    "unverified": [
+      "Цена поездки к лодкам на Рейли",
+      "Трансфер к пирсу утром 1 января"
+    ],
+    "description": "Стандартный двухместный номер в небольшом отеле с садом. Гости хвалят чистоту и тишину. До пляжа Ао Нанг около 15 минут на машине, поэтому для тренировок на Рейли стоит учесть дорогу до лодок.",
+    "note": "Тариф Trip.com проверен 15 ноября 2026. Предоплата онлайн, тариф невозвратный, без завтрака. В карточке этого номера указано «Без Wi-Fi». Бесплатный Wi-Fi есть в общих зонах. Оценка на Trip.com — 8,5/10.",
+    "url": "https://ru.trip.com/hotels/detail/?cityId=1405&hotelId=710453&checkIn=2026-12-25&checkOut=2027-01-01&adult=2&children=0&crn=1&curr=RUB&locale=ru-RU",
+    "photoSource": "https://ru.trip.com/hotels/detail/?cityId=1405&hotelId=710453",
+    "photos": [
+      "/images/naga-peak-resort-1.jpg",
+      "/images/naga-peak-resort-2.jpg"
+    ]
+  },
+  {
     "id": "krabi-1364945300175330776",
     "name": "Resort in Aonang by Bee",
     "region": "Краби",
