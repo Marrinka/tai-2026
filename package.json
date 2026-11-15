@@ -14,7 +14,9 @@
     "db:generate": "drizzle-kit generate",
     "build:offline": "node scripts/build-offline.mjs",
     "prebuild": "npm run build:offline",
-    "predev": "npm run build:offline"
+    "predev": "npm run build:offline",
+    "plan:html": "npm run build:offline && node scripts/trip-file.mjs export",
+    "plan:import": "node scripts/trip-file.mjs import"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

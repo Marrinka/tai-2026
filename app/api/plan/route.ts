@@ -1,9 +1,9 @@
 import { env } from 'cloudflare:workers';
 import { initialPlan } from '../../data';
 import { z } from 'zod';
+import { planSchema } from '../../plan-schema';
 export const dynamic='force-dynamic';
-const amount=z.number().finite().min(0).max(10000000);
-const schema=z.object({revision:z.number().int().min(0),plan:z.object({flightId:z.string().max(100),stays:z.object({holiday:z.string().max(100),work:z.string().max(100),bangkok:z.string().max(100).optional()}),overrides:z.record(amount),budget:amount,costs:z.array(z.object({id:z.string().max(100),name:z.string().min(1).max(150),amount})).max(50),checks:z.array(z.string().max(100)).max(100),events:z.array(z.object({id:z.string().max(100),date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),time:z.string().max(5),title:z.string().min(1).max(200),category:z.string().max(100),price:amount.nullable(),note:z.string().max(2000),activityId:z.string().max(100).optional(),done:z.boolean()})).max(500)})});
+const schema = z.object({revision:z.number().int().min(0), plan:planSchema});
 function hasPlanLink(request:Request){
  const key=request.headers.get('X-Plan-Link');
  return !!env.PLAN_LINK_KEY && !!key && key===env.PLAN_LINK_KEY;

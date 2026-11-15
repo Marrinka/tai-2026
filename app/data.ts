@@ -1,3 +1,4 @@
+import savedTrip from './trip-plan.json';
 import flightResearch from './flights.json';
 import research from './research.json';
 import condoResearch from './condos.json';
@@ -17,22 +18,7 @@ export const bangkokStays:BangkokStay[]=bangkokResearch as BangkokStay[];
 export const stays:Stay[]=[...hotels,...condoResearch as Stay[],...bangkokStays];
 export type TripEvent={id:string;date:string;time:string;title:string;category:string;price:number|null;note:string;activityId?:string;done:boolean};
 export type Plan={flightId:string;stays:{holiday:string;work:string;bangkok?:string};overrides:Record<string,number>;events:TripEvent[];costs:{id:string;name:string;amount:number}[];checks:string[];budget:number};
-export const initialPlan:Plan={flightId:'eastern',stays:{holiday:'jhotel',work:'blue'},overrides:{},budget:450000,checks:[],costs:[{id:'food',name:'Еда, вода и кофе',amount:55000},{id:'transport',name:'Трансферы, такси и лодки',amount:25000},{id:'visa',name:'Две TR-визы и документы',amount:10000},{id:'insurance',name:'Страховки со скалолазанием',amount:10000},{id:'internet',name:'Мобильная связь',amount:4000},{id:'daily',name:'Стирка и бытовые мелочи',amount:3000}],events:[
-{id:'flight-out',date:'2026-12-21',time:'16:45',title:'Вылет из Москвы',category:'Дорога',price:0,note:'Время в Москве. Данные для базового China Eastern; при смене билетов обновите событие. Билеты учтены отдельно.',done:false},
-{id:'arrival',date:'2026-12-22',time:'14:30',title:'Прилёт и трансфер в Ао Нанг',category:'Дорога',price:0,note:'Местное время. Трансфер учтён в транспортных расходах.',done:false},
-{id:'relax',date:'2026-12-23',time:'',title:'Пляж и отдых после дороги',category:'Отдых',price:0,note:'Свободный день без ранних подъёмов.',done:false},
-{id:'climb-1',date:'2026-12-25',time:'09:00',title:'Скалолазание на Рейли · 1',category:'Спорт',price:7200,note:'Обязательное занятие для двоих, полдня. Время примерное — согласовать со школой.',activityId:'climbing',done:false},
-{id:'hong',date:'2026-12-28',time:'08:00',title:'Острова Хонг',category:'Экскурсии',price:6240,note:'За двоих, включая парковый сбор. Дата предварительная.',activityId:'hong-tour',done:false},
-{id:'newyear',date:'2026-12-31',time:'',title:'Новый год у моря',category:'Отдых',price:0,note:'Свободный вечер. Специальный ужин не включён в бюджет.',done:false},
-{id:'climb-2',date:'2027-01-03',time:'09:00',title:'Скалолазание на Рейли · 2',category:'Спорт',price:7200,note:'Второе обязательное занятие, полдня.',activityId:'climbing',done:false},
-{id:'kayak',date:'2027-01-05',time:'08:30',title:'Каяки в манграх',category:'Спорт',price:4315,note:'За двоих, трансфер из Ао Нанга включён.',activityId:'kayak',done:false},
-{id:'move',date:'2027-01-08',time:'10:00',title:'Переезд на Пхукет',category:'Дорога',price:0,note:'Трансфер учтён в транспортных расходах. Вечером проверить рабочее место.',done:false},
-{id:'wifi',date:'2027-01-09',time:'18:00',title:'Проверка Wi-Fi и мобильного резерва',category:'Подготовка',price:0,note:'Пробный одновременный видеозвонок с двух ноутбуков.',done:false},
-{id:'beach',date:'2027-01-10',time:'09:00',title:'Последний день полного отпуска',category:'Отдых',price:0,note:'Пляж Най Харн. Завтра работа с 13:00 местного времени.',done:false},
-{id:'town',date:'2027-01-17',time:'10:00',title:'Старый город Пхукета',category:'Отдых',price:0,note:'Пешая прогулка. Дорога и еда учтены в общих статьях.',done:false},
-{id:'exit',date:'2027-02-01',time:'20:00',title:'Выезд в аэропорт',category:'Дорога',price:0,note:'При базовом рейсе вылет в 00:05 уже 2 февраля. Уточните хранение вещей после выселения.',done:false},
-{id:'flight-back',date:'2027-02-02',time:'00:05',title:'Возвращение в Москву',category:'Дорога',price:0,note:'При базовом China Eastern прибытие в Москву в 14:35. Билеты учтены отдельно.',done:false}
-]};
+export const initialPlan:Plan = savedTrip;
 export const checklist=[
 {id:'passports',group:'Документы',title:'Проверить загранпаспорта',description:'Не менее 6 месяцев действия на дату въезда.'},
 {id:'visa',group:'Документы',title:'Подать на туристические TR-визы',description:'Начало ноября. Обычно 14 рабочих дней после оплаты; возможны 4–6 недель. До 60 дней пребывания. Сбор $40 с человека.',url:'https://moscow.thaiembassy.org/en/publicservice/e-visa-application-procedures?page=5d843dbc15e39c1abc005882'},
